@@ -16,4 +16,6 @@ open class BaseActivity : AppCompatActivity() {
 
     fun Context.toast(msg: CharSequence) =
             Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+
+    val <T> ArrayList<T>.lastIndex: Int get() = size - 1
 }

@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import com.ceehn.R
 import com.ceehn.adapter.CollegeAdapter
 import com.ceehn.model.College
+import com.ceehn.util.CommonUtil
 import kotlinx.android.synthetic.main.activity_college_list.*
 
 class CollegeListActivity : BaseActivity() {
@@ -20,6 +21,7 @@ class CollegeListActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_college_list)
+
 
         college_list.layoutManager = LinearLayoutManager(this)
         college_list.adapter = CollegeAdapter(items)
