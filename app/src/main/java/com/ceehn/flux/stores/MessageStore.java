@@ -4,6 +4,7 @@ package com.ceehn.flux.stores;
 import com.ceehn.flux.actions.Action;
 import com.ceehn.flux.actions.MessageAction;
 import com.ceehn.flux.model.Message;
+import com.squareup.otto.Subscribe;
 
 /**
  * Created by lebang on 2017/7/30.
@@ -28,6 +29,7 @@ public class MessageStore extends Store {
     }
 
     @Override
+    @Subscribe
     public void onAction(Action action) {
         switch (action.getType()) {
             case MessageAction.ACTION_NEW_MESSAGE:

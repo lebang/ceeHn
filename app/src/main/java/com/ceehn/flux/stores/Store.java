@@ -1,5 +1,6 @@
 package com.ceehn.flux.stores;
 
+import com.ceehn.flux.MainView;
 import com.ceehn.flux.actions.Action;
 import com.squareup.otto.Bus;
 
@@ -15,11 +16,11 @@ public abstract class Store {
     protected Store() {
     }
 
-    public void register(final Objects view) {
+    public void register(final Object view) {
         this.bus.register(view);
     }
 
-    public void unregister(final Objects view) {
+    public void unregister(final Object view) {
         this.bus.unregister(view);
     }
 
